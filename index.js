@@ -75,13 +75,12 @@ function searchSymbol(sentence, symbols) {
     }
 }
 
-
-let test = 'qwe'
+let test = 'Hello word'
 console.log(searchSymbol(test, ['e','w']));
 
 const input = prompt('Введіть довжину массиву, два числа через кому')
 function userArray(input) {
-  if(input?.trim()!=='' && input !== null) {
+  if(input?.trim()) {
       const arr = input.split(',')
       const sum = +arr[0] + +arr[1]
       if(arr.length === 2 && Number(arr[0]) && Number(arr[1])) {
