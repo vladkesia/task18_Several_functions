@@ -1,53 +1,53 @@
-// function searchNumber(arr) {
-//     let sum = 0
-//     let midle = 1
-//     if (Array.isArray(arr)) {
-//         arr.map(element => {
-//             if (!isNaN(element) && typeof element === 'number') {
-//                 sum += element
-//                 midle++
-//             }
-//         })
-//     }
-//     return sum / midle
-// }
-//
-// const array = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
-// console.log(searchNumber(array))
-//
-// function doMatch(x, znak, y) {
-//     const firstNumber = Number(x)
-//     const secondNumber = Number(y)
-//     let result
-//     if (!isNaN(x) && !isNaN(y)) {
-//         switch (znak) {
-//             case '+':
-//                 result = firstNumber + secondNumber
-//                 break;
-//             case '-':
-//                 result = firstNumber - secondNumber
-//                 break;
-//             case '*':
-//                 result = firstNumber * secondNumber
-//                 break;
-//             case '/':
-//                 result = firstNumber / secondNumber
-//                 break;
-//             case '%':
-//                 result = firstNumber % secondNumber
-//                 break;
-//             case '^':
-//                 result = firstNumber ^ secondNumber
-//                 break;
-//             default:
-//                 result = NaN
-//         }
-//     }
-//     return result
-// }
-//
-// console.log(doMatch(7,'*',2));
-//
+function searchNumber(arr) {
+    let sum = 0
+    let midle = 1
+    if (Array.isArray(arr)) {
+        arr.map(element => {
+            if (!isNaN(element) && typeof element === 'number') {
+                sum += element
+                midle++
+            }
+        })
+    }
+    return sum / midle
+}
+
+const array = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]
+console.log(searchNumber(array))
+
+function doMatch(x, znak, y) {
+    const firstNumber = Number(x)
+    const secondNumber = Number(y)
+    let result
+    if (!isNaN(x) && !isNaN(y)) {
+        switch (znak) {
+            case '+':
+                result = firstNumber + secondNumber
+                break;
+            case '-':
+                result = firstNumber - secondNumber
+                break;
+            case '*':
+                result = firstNumber * secondNumber
+                break;
+            case '/':
+                result = firstNumber / secondNumber
+                break;
+            case '%':
+                result = firstNumber % secondNumber
+                break;
+            case '^':
+                result = firstNumber ^ secondNumber
+                break;
+            default:
+                result = NaN
+        }
+    }
+    return result
+}
+
+console.log(doMatch(7,'*',2));
+
 
 function searchSymbol(sentence, symbols) {
    if (Array.isArray(symbols) && typeof sentence === 'string') {
@@ -64,9 +64,9 @@ function searchSymbol(sentence, symbols) {
 }
 
 let test = 'Hello word'
-console.log(searchSymbol(test, ['w']));
+console.log(searchSymbol(test, ['w','l']));
 
-const input = prompt('Введіть довжину массиву, два числа через кому')
+// const input = prompt('Введіть довжину массиву, два числа через кому')
 function userArray(input) {
   if(input?.trim()) {
       const arr = input.split(',')
@@ -96,5 +96,5 @@ function userArray(input) {
   }
 
 }
-userArray(input)
+// userArray(input)
 
