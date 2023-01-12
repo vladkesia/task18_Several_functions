@@ -16,16 +16,16 @@ const array = [2, 3, 3, 5, 7, 10]
 console.log(searchNumber(array))
 
 
-let input2 = prompt('введіть ваше вираження без пробілів все разом ')
+let input2 = prompt('введіть ваше вираження через пробіл все  ')
 
 function doMatch(value) {
-    if (value !== null && value.trim() !== '' && value.length === 3) {
-        const valueArr = value.split('')
+    if (value !== null && value.trim() !== '') {
+        const valueArr = value.split(' ')
         const firstNumber = Number(valueArr[0])
         const secondNumber = Number(valueArr[2])
         const znak = valueArr[1]
         let result
-        if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+        if (!isNaN(firstNumber) && !isNaN(secondNumber) && valueArr.length === 3) {
             switch (znak) {
                 case '+':
                     result = firstNumber + secondNumber
@@ -48,8 +48,11 @@ function doMatch(value) {
                 default:
                     result = NaN
             }
+            alert(result)
+        }else {
+            alert('помилка данних')
         }
-        alert(result)
+
     } else {
         alert('треба було ввести перше число знак(що треба зробити ) друге число')
     }
@@ -63,7 +66,9 @@ function userArray(input) {
     const arr = input.split(',')
     let sum = 0
     for (let element of arr){
-        if (!Number(element)){
+        console.log(!Number(element))
+        console.log(Number(element)<0)
+        if (!Number(element) || Number(element) < 0 || arr.length !== 2){
             return alert("повинно бути число і повинно бути більше 0  ")
         }else {
             sum +=Number(element)
